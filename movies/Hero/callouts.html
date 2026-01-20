@@ -1,51 +1,54 @@
 
         
     <style>
-        body { margin: 0; padding: 10px; background: transparent; font-family: 'Poppins', sans-serif; overflow: hidden; }
+        body { margin: 0; padding: 5px; background: transparent; font-family: 'Poppins', sans-serif; overflow: hidden; }
+        
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            max-width: 900px;
-            margin: 0 auto;
+            /* This forces exactly 3 columns regardless of screen size */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 8px;
+            width: 100%;
+            box-sizing: border-box;
         }
+        
         .callout-card {
             background: white;
-            border-radius: 12px;
-            padding: 12px 8px;
+            border-radius: 8px;
+            padding: 8px 4px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             border: 1px solid #dfe0f7;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-width: 0; /* Prevents cards from pushing grid wide */
         }
+
         .label {
-            font-size: 9px;
+            font-size: 8px; /* Slightly smaller for mobile fit */
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.5px;
             color: #7175c0;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             font-weight: 600;
+            white-space: nowrap;
         }
+
         .value {
-            font-size: 14px;
+            font-size: 11px; /* Scaled down to ensure no overflow */
             font-weight: 700;
             color: #151853;
-            line-height: 1.2;
+            line-height: 1.1;
+            word-wrap: break-word;
+            display: block;
+            width: 100%;
         }
-        .icon { font-size: 20px; margin-bottom: 4px; }
 
-        @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
-            .card-consensus {
-                grid-column: span 2;
-            }
-        }
+        .icon { font-size: 16px; margin-bottom: 2px; }
+        
+        /* Removed the media query that was switching to 2 columns */
     </style>
     
         <div class="grid-container">
