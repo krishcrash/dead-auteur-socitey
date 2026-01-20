@@ -5,14 +5,14 @@
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 12px;
             max-width: 900px;
             margin: 0 auto;
         }
         .callout-card {
             background: white;
             border-radius: 12px;
-            padding: 15px;
+            padding: 12px 8px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             border: 1px solid #dfe0f7;
@@ -22,29 +22,29 @@
             align-items: center;
         }
         .label {
-            font-size: 10px;
+            font-size: 9px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: #7175c0;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             font-weight: 600;
         }
         .value {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #151853;
             line-height: 1.2;
         }
-        .icon {
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
+        .icon { font-size: 20px; margin-bottom: 4px; }
 
         @media (max-width: 600px) {
-            .grid-container { gap: 8px; }
-            .value { font-size: 13px; }
-            .icon { font-size: 18px; }
-            .callout-card { padding: 10px 5px; }
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .card-consensus {
+                grid-column: span 2;
+            }
         }
     </style>
     
@@ -56,13 +56,29 @@
             </div>
             <div class="callout-card">
                 <div class="label">Top Category</div>
-                <div class="icon">😊</div>
-                <div class="value">Enjoyable</div>
+                <div class="icon">💡</div>
+                <div class="value">Themes</div>
             </div>
-            <div class="callout-card">
+            <div class="callout-card card-consensus">
                 <div class="label">Consensus</div>
                 <div class="icon">🗣️</div>
                 <div class="value">Some Debate</div>
+            </div>
+
+            <div class="callout-card">
+                <div class="label">The Fan</div>
+                <div class="icon">🤩</div>
+                <div class="value">MA (9.9)</div>
+            </div>
+            <div class="callout-card">
+                <div class="label">The Cynic</div>
+                <div class="icon">😒</div>
+                <div class="value">YA (8.5)</div>
+            </div>
+            <div class="callout-card">
+                <div class="label">The Specialist</div>
+                <div class="icon">💡</div>
+                <div class="value">MA (Themes)</div>
             </div>
         </div>
         
