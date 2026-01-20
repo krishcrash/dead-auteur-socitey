@@ -1,0 +1,68 @@
+
+        
+    <style>
+        body { margin: 0; padding: 10px; background: transparent; font-family: 'Poppins', sans-serif; overflow: hidden; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .callout-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border: 1px solid #dfe0f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #7175c0;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #151853;
+            line-height: 1.2;
+        }
+        .icon {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container { gap: 8px; }
+            .value { font-size: 13px; }
+            .icon { font-size: 18px; }
+            .callout-card { padding: 10px 5px; }
+        }
+    </style>
+    
+        <div class="grid-container">
+            <div class="callout-card">
+                <div class="label">Rank</div>
+                <div class="icon">🏆</div>
+                <div class="value">#16 of 37</div>
+            </div>
+            <div class="callout-card">
+                <div class="label">Top Category</div>
+                <div class="icon">😊</div>
+                <div class="value">Enjoyable</div>
+            </div>
+            <div class="callout-card">
+                <div class="label">Consensus</div>
+                <div class="icon">🤝</div>
+                <div class="value">High Agreement</div>
+            </div>
+        </div>
+        
