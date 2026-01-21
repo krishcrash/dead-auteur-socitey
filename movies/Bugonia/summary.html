@@ -1,0 +1,69 @@
+
+    <style>
+        body { margin: 0; padding: 0; background: transparent; font-family: 'Lato', sans-serif; overflow: hidden; }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table { 
+            table-layout: auto; 
+            width: 100%; 
+            min-width: 550px; /* Increased to support larger font */
+            border-collapse: collapse; 
+            margin: 0; 
+            font-size: 14px; /* Large readable text for Desktop */
+        }
+
+        /* Adjusted sticky column for larger labels */
+        th:first-child, td:first-child { 
+            width: 70px; 
+            min-width: 70px;
+            text-align: left; 
+            padding-left: 8px;
+            position: sticky;
+            left: 0;
+            background-color: white; 
+            z-index: 2;
+            border-right: 2px solid #dfe0f7;
+        }
+
+        th:first-child {
+            background-color: #151853; 
+            color: white;
+            z-index: 3;
+        }
+
+        th, td { 
+            border: 1px solid #dfe0f7; 
+            text-align: center; 
+            padding: 4px 2px; /* Breathable spacing */
+            white-space: nowrap;
+        }
+
+        th { 
+            font-family: 'Poppins', sans-serif !important; 
+            background-color: #151853; 
+            color: white;
+            line-height: 1.2;
+        }
+
+        .total-col { background-color: #bec1ef !important; font-weight: bold; }
+        .max-row { background-color: #dfe0f7 !important; font-style: italic; }
+
+        /* Media query to scale down for phones */
+        @media screen and (max-width: 600px) {
+            table { 
+                font-size: 11.5px; 
+                min-width: 480px;
+            }
+            th:first-child, td:first-child { 
+                width: 55px; 
+                min-width: 55px; 
+                padding-left: 4px;
+            }
+        }
+    </style>
+    <div class="table-container"><table><thead><tr><th></th><th>Enjoyable</th><th>Plot</th><th>Acting</th><th>Camera</th><th>Themes</th><th>Music</th><th>Casting</th><th>Wildcard</th><th>Total</th></tr></thead><tbody><tr><td>Mean</td><td>1.67</td><td>0.98</td><td>1.18</td><td>0.62</td><td>0.28</td><td>0.32</td><td>0.36</td><td>-0.08</td><td class="total-col">5.33</td></tr><tr class="max-row"><td>Max</td><td>5</td><td>2</td><td>1.5</td><td>1</td><td>0.5</td><td>0.5</td><td>0.5</td><td>0.5</td><td class="total-col">11.5</td></tr><tr><td>Diff</td><td>3.33</td><td>1.02</td><td>0.32</td><td>0.38</td><td>0.22</td><td>0.18</td><td>0.14</td><td>0.58</td><td class="total-col">6.17</td></tr></tbody></table></div>
